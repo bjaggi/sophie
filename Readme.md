@@ -1,5 +1,9 @@
 # sophie
 
+## Start Kafka using docker compose or Shell Script
+docker-compose up
+
+
 ## to Build Producer Jar
 mvn clean install 
 ## to Build Producer Image 
