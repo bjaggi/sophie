@@ -1,0 +1,5 @@
+/Users/brijeshjaggi/Documents/CodeSample_Reference/EventLayer/globe-and-mail/kafka-consumer/src/main/java/com/eva/consumer/multithread/RunnableConsumer.java
+/Users/brijeshjaggi/Documents/CodeSample_Reference/EventLayer/globe-and-mail/kafka-consumer/src/main/java/com/eva/consumer/json/Tickers.java
+/Users/brijeshjaggi/Documents/CodeSample_Reference/EventLayer/globe-and-mail/kafka-consumer/src/main/java/com/eva/consumer/json/Ticker.java
+/Users/brijeshjaggi/Documents/CodeSample_Reference/EventLayer/globe-and-mail/kafka-consumer/src/main/java/com/eva/consumer/deserializer/JsonDeserializer.java
+/Users/brijeshjaggi/Documents/CodeSample_Reference/EventLayer/globe-and-mail/kafka-consumer/src/main/java/com/eva/consumer/ConsumerDemo.java

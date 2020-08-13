@@ -1,0 +1,9 @@
+com/eva/consumer/stream/consumer/deserializer/JsonSerializer.class
+com/eva/consumer/stream/consumer/json/Tickers.class
+com/eva/consumer/stream/consumer/StreamsDemo.class
+com/eva/consumer/stream/consumer/json/TickerAggregator.class
+com/eva/consumer/stream/consumer/serde/JsonPOJODeserializer.class
+com/eva/consumer/stream/consumer/json/Ticker.class
+com/eva/consumer/stream/consumer/StreamsDemo$TickerAggSerde.class
+com/eva/consumer/stream/consumer/deserializer/JsonDeserializer.class
+com/eva/consumer/stream/consumer/serde/JsonPOJOSerializer.class

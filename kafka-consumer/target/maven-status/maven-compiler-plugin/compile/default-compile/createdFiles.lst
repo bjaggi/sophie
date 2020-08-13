@@ -1,0 +1,5 @@
+com/eva/consumer/ConsumerDemo.class
+com/eva/consumer/deserializer/JsonDeserializer.class
+com/eva/consumer/json/Ticker.class
+com/eva/consumer/json/Tickers.class
+com/eva/consumer/multithread/RunnableConsumer.class
