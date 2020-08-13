@@ -13,11 +13,13 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.*;
+import org.apache.kafka.common.utils.Bytes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.kstream.*;
+import org.apache.kafka.streams.state.KeyValueStore;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -64,8 +66,9 @@ public class StreamsDemo {
 
 
 
-        TimeWindowedKStream<String, Integer> KGS0 =
-                // KTable<String, JsonNode> stockTicker =
+        //TimeWindowedKStream<String, Integer> KGS0 =
+                // KTable<String, Integer> stockTicker =
+        KGroupedStream <String, Integer> KGS0 =
                 KS0.flatMapValues(tickers -> {
                             ObjectMapper mapper = new ObjectMapper();
                             mapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
@@ -105,15 +108,14 @@ public class StreamsDemo {
                     }
                     System.out.println(ticker.getName()+", "+ticker.getPrice());
                     return new KeyValue<>(ticker.getName(), ticker.getPrice());
-                }).groupByKey()
-                        .windowedBy(TimeWindows.of(Duration.ofSeconds(30)))
-                ;
+                }).groupByKey();
+                       // .windowedBy(TimeWindows.of(Duration.ofSeconds(30)))
 
 
 
 
 
-       /* KTable<String, TickerAggregator> KT2 = KGS0
+        KTable<String, TickerAggregator> KT2 = KGS0
                 .aggregate(
                 //Initializer
                 () -> new TickerAggregator().withstockCount(0).withtotalPrice(0).withavgPrice(0D),
@@ -121,17 +123,18 @@ public class StreamsDemo {
 
                 (k, v, aggV) -> new TickerAggregator()
                         .withstockCount(aggV.getstockCount() + 1)
-                        .withtotalPrice( (v + aggV.gettotalPrice()) )).intValue())//TODO simplify this
-                        .withavgPrice(aggV.gettotalPrice() + v) / (aggV.getstockCount() + 1D)),
-                //Serializer
-                Materialized.<String, TickerAggregator, KeyValueStore<Bytes, byte[]>>as("agg-store")
-                        .withKeySerde(Serdes.String())
-                        .withValueSerde(new TickerAggSerde())
+                        .withtotalPrice( (v + aggV.gettotalPrice()) )
+                        .withavgPrice((aggV.gettotalPrice() + v) / (aggV.getstockCount() + 1D)),
+                        //Serializer
+                        Materialized.<String, TickerAggregator, KeyValueStore<Bytes, byte[]>>as("agg-store")
+                                .withKeySerde(Serdes.String())
+                                .withValueSerde(new TickerAggSerde())
+
         );
-*/
 
 
-        KGS0.count().toStream().foreach(
+
+        KT2.toStream().foreach(
                 (k, v) -> System.out.println("Ticker = " + k + " Avg Price = " + v));
 
         KafkaStreams streams = new KafkaStreams(streamBuilder.build(), properties);

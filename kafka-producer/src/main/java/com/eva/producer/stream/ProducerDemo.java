@@ -9,6 +9,7 @@ import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 
+import javax.xml.datatype.Duration;
 import java.util.Properties;
 import java.util.Random;
 
@@ -38,7 +39,7 @@ public class ProducerDemo {
             // send data - asynchronous
             producer.send(record);
             try {
-                Thread.sleep(60*1000/10);// 10 times per second
+                Thread.sleep(100);// 10 times per second
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

@@ -2,26 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec31ac69-df9e-4959-b20a-adc20234d472" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../kafka-consumer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-consumer/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-consumer/kafka-consumer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-consumer/kafka-consumer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-consumer/src/main/com/eva/stream/consumer/ConsumerDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-consumer/src/main/com/eva/stream/consumer/deserializer/JsonDeserializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-consumer/src/main/com/eva/stream/consumer/json/Ticker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-consumer/src/main/com/eva/stream/consumer/json/Tickers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-consumer/src/main/com/eva/stream/consumer/multithread/RunnableConsumer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-consumer/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-consumer/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-streams/kafka-streams.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-streams/kafka-streams.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-streams/src/main/com/eva/stream/consumer/StreamsDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-streams/src/main/com/eva/stream/consumer/deserializer/JsonDeserializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-streams/src/main/com/eva/stream/consumer/deserializer/JsonSerializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-streams/src/main/com/eva/stream/consumer/json/Ticker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-streams/src/main/com/eva/stream/consumer/json/TickerAggregator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-streams/src/main/com/eva/stream/consumer/json/Tickers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-streams/src/main/com/eva/stream/consumer/serde/JsonPOJODeserializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-streams/src/main/com/eva/stream/consumer/serde/JsonPOJOSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/producer/stream/ProducerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/producer/stream/ProducerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/state-store/streams-app/0_0/.checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/state-store/streams-app/0_0/.checkpoint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/KSTREAM-AGGREGATE-STATE-STORE-0000000003/000011.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/KSTREAM-AGGREGATE-STATE-STORE-0000000003/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/KSTREAM-AGGREGATE-STATE-STORE-0000000003/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/KSTREAM-AGGREGATE-STATE-STORE-0000000003/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/KSTREAM-AGGREGATE-STATE-STORE-0000000003/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/KSTREAM-AGGREGATE-STATE-STORE-0000000003/MANIFEST-000010" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/KSTREAM-AGGREGATE-STATE-STORE-0000000003/OPTIONS-000005" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/KSTREAM-AGGREGATE-STATE-STORE-0000000003/OPTIONS-000013" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/agg-store/000030.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/agg-store/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/agg-store/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/agg-store/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/agg-store/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/agg-store/MANIFEST-000029" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/agg-store/OPTIONS-000029" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/state-store/streams-app/1_0/rocksdb/agg-store/OPTIONS-000032" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/producer/stream/ProducerDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/eva/producer/stream/ProducerDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kafka-streams/src/main/java/com/eva/consumer/stream/consumer/StreamsDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-streams/src/main/java/com/eva/consumer/stream/consumer/StreamsDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kafka-streams/target/classes/com/eva/consumer/stream/consumer/StreamsDemo$TickerAggSerde.class" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-streams/target/classes/com/eva/consumer/stream/consumer/StreamsDemo$TickerAggSerde.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kafka-streams/target/classes/com/eva/consumer/stream/consumer/StreamsDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-streams/target/classes/com/eva/consumer/stream/consumer/StreamsDemo.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/../kafka-consumer/target/" />
@@ -37,10 +36,35 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../kafka-streams/src/main/java/com/eva/consumer/stream/consumer/StreamsDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="66" column="8" lean-forward="true" selection-end-line="153" selection-end-column="1" />
+            <state relative-caret-position="225">
+              <caret line="128" selection-start-line="128" selection-end-line="130" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5720#5776#0" expanded="true" />
+                <element signature="e#6345#6346#0" expanded="true" />
+                <element signature="e#6424#6425#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../kafka-streams/src/main/java/com/eva/consumer/stream/consumer/json/TickerAggregator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/eva/producer/stream/ProducerDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1110#1128#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,7 +124,6 @@
         <option value="$PROJECT_DIR$/../kafka-streams/src/main/com/eva/stream/consumer/StreamsDemo.java" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/src/main/java/com/eva/producer/stream/serializer/JsonSerializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/eva/producer/stream/ProducerDemo.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../kafka-consumer/src/main/java/com/eva/consumer/json/Ticker.java" />
         <option value="$PROJECT_DIR$/../kafka-consumer/src/main/java/com/eva/consumer/json/Tickers.java" />
@@ -116,6 +139,7 @@
         <option value="$PROJECT_DIR$/../kafka-streams/src/main/java/com/eva/consumer/stream/consumer/json/Tickers.java" />
         <option value="$PROJECT_DIR$/../kafka-streams/src/main/java/com/eva/consumer/stream/consumer/deserializer/JsonDeserializer.java" />
         <option value="$PROJECT_DIR$/../kafka-streams/src/main/java/com/eva/consumer/stream/consumer/deserializer/JsonSerializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/eva/producer/stream/ProducerDemo.java" />
         <option value="$PROJECT_DIR$/../kafka-streams/src/main/java/com/eva/consumer/stream/consumer/StreamsDemo.java" />
       </list>
     </option>
@@ -161,68 +185,32 @@
           <expand>
             <path>
               <item name="kafka-producer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafka-consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="kafka-producer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kafka-producer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafka-consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="kafka-producer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kafka-producer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafka-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kafka-producer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafka-consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="kafka-producer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kafka-producer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafka-consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="kafka-producer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kafka-producer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafka-consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="kafka-producer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="deserializer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kafka-producer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafka-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kafka-producer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafka-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="multithread" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kafka-producer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafka-consumer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer" type="462c0819:PsiDirectoryNode" />
               <item name="stream" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -289,7 +277,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597287223630" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597288449951" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -325,7 +313,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ProducerDemo (1)">
+  <component name="RunManager" selected="Application.StreamsDemo (1)">
     <configuration name="ConsumerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.eva.stream.consumer.ConsumerDemo" />
       <module name="kafka-consumer" />
@@ -406,8 +394,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProducerDemo (1)" />
         <item itemvalue="Application.StreamsDemo (1)" />
+        <item itemvalue="Application.ProducerDemo (1)" />
         <item itemvalue="Application.StreamsDemo" />
         <item itemvalue="Application.ProducerDemo (1)" />
         <item itemvalue="Application.ProducerDemo" />
@@ -448,7 +436,7 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294964" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3467626" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32230216" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5122302" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -710,17 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/eva/producer/stream/ProducerDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="83" selection-start-line="25" selection-start-column="83" selection-end-line="25" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1110#1128#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../kafka-consumer/src/main/java/com/eva/consumer/json/Ticker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -800,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../kafka-streams/src/main/java/com/eva/consumer/stream/consumer/json/TickerAggregator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../kafka-streams/src/main/java/com/eva/consumer/stream/consumer/json/Tickers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -838,12 +808,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../kafka-streams/src/main/java/com/eva/consumer/stream/consumer/StreamsDemo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/eva/producer/stream/ProducerDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="66" column="8" lean-forward="true" selection-end-line="153" selection-end-column="1" />
+        <state relative-caret-position="231">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1110#1128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kafka-streams/src/main/java/com/eva/consumer/stream/consumer/json/TickerAggregator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kafka-streams/src/main/java/com/eva/consumer/stream/consumer/StreamsDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="128" selection-start-line="128" selection-end-line="130" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5720#5776#0" expanded="true" />
+            <element signature="e#6345#6346#0" expanded="true" />
+            <element signature="e#6424#6425#0" expanded="true" />
           </folding>
         </state>
       </provider>
