@@ -88,8 +88,8 @@ while(true) {
                     avgMap.put(ticker.getName(), ticker.getPrice());
                 } else {
                     BigDecimal currentAvg = avgMap.get(ticker.getName());
-                    currentAvg = (currentAvg.add(ticker.getPrice())).divide(new BigDecimal(2.0));
-                    avgMap.put(ticker.getName(), currentAvg);
+                    currentAvg = (currentAvg.add(ticker.getPrice())).divide(new BigDecimal(2.0)).setScale(2, BigDecimal.ROUND_UP);
+                    avgMap.put(ticker.getName(), currentAvg.setScale(2, BigDecimal.ROUND_UP));
                 }
             }
 
@@ -101,6 +101,7 @@ while(true) {
 
     System.out.println("===============>>>>>>>> Average as of " + new Timestamp(System.currentTimeMillis()));
     System.out.println(avgMap);
+    Thread.sleep(30000);
 }
 
         } catch (WakeupException e) {
