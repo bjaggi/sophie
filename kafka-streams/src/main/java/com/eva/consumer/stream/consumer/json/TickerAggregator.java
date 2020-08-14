@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-//import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringBuilder;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonPropertyOrder({
@@ -79,7 +79,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
         @Override
         public String toString() {
             //return new ToStringBuilder(this).append("totalPrice", totalPrice).append("stockCount", stockCount).append("avgPrice", avgPrice).toString();
-        return "over ride me";
+            return new ToStringBuilder(this).append("totalPrice", totalPrice).append("stockCount", stockCount).append("avgPrice", avgPrice).toString();
+
         }
 
     }

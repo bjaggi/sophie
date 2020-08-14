@@ -9,12 +9,14 @@
         <module name="kafka-consumer" />
         <module name="kafka-producer" />
         <module name="kafka-streams" />
+        <module name="kstream-aggregate" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="kafka-consumer" target="8" />
       <module name="kafka-producer" target="1.5" />
       <module name="kafka-streams" target="8" />
+      <module name="kstream-aggregate" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -6,6 +6,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../kafka-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/../kafka-streams/pom.xml" />
+        <option value="$PROJECT_DIR$/../../learningjournal/Kafka-Streams-Real-time-Stream-Processing/kstream-aggregate/pom.xml" />
       </list>
     </option>
   </component>

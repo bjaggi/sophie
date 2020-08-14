@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/../kafka-consumer/kafka-consumer.iml" filepath="$PROJECT_DIR$/../kafka-consumer/kafka-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/kafka-producer.iml" filepath="$PROJECT_DIR$/kafka-producer.iml" />
       <module fileurl="file://$PROJECT_DIR$/../kafka-streams/kafka-streams.iml" filepath="$PROJECT_DIR$/../kafka-streams/kafka-streams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../learningjournal/Kafka-Streams-Real-time-Stream-Processing/kstream-aggregate/kstream-aggregate.iml" filepath="$PROJECT_DIR$/../../learningjournal/Kafka-Streams-Real-time-Stream-Processing/kstream-aggregate/kstream-aggregate.iml" />
     </modules>
   </component>
 </project>
