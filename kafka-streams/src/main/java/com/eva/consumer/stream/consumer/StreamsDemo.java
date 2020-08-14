@@ -21,6 +21,7 @@ import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.kstream.*;
 import org.apache.kafka.streams.state.KeyValueStore;
+import org.apache.kafka.streams.state.WindowStore;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -59,14 +60,11 @@ public class StreamsDemo {
         KStream<String, JsonNode> KS0 = streamsBuilder.stream(topic,
                 Consumed.with(Serdes.String(), jsonNodeSerde));
 
-/*        KGroupedStream<String, Ticker> KGS1 = KS0.groupBy(
-                (k, v) -> v.getName(),
-                Serialized.with(Serdes.String(),
-                        new TickerAggSerde()));*/
 
 
-        KGroupedStream<String, Ticker> KGS1 = KS0.flatMapValues(tickers -> {
-                    //TimeWindowedKStream<String, Ticker> KGS1 = KS0.flatMapValues(tickers -> {
+
+       // KGroupedStream<String, Ticker> KGS1 = KS0.flatMapValues(tickers -> {
+                    TimeWindowedKStream<String, Ticker> KGS1 = KS0.flatMapValues(tickers -> {
                     ObjectMapper mapper = new ObjectMapper();
                     mapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
 
@@ -107,11 +105,11 @@ public class StreamsDemo {
             return new KeyValue<>(ticker.getName(), ticker);
         }).groupByKey(
                 Serialized.with(Serdes.String(),
-                        new TickerAggSerde()));
-//.windowedBy(TimeWindows.of(Duration.ofMinutes(30)));
+                        new TickerAggSerde()))
+.windowedBy(TimeWindows.of(Duration.ofMinutes(30)));
 
 
-        KTable<String, TickerAggregator> KT2 = KGS1.aggregate(
+        KTable<Windowed<String>, TickerAggregator> KT2 = KGS1.aggregate(
                 //Initializer
                 () -> new TickerAggregator().withstockCount(0).withtotalPrice(0).withavgPrice(0D)
                 ,
@@ -121,7 +119,7 @@ public class StreamsDemo {
                         .withtotalPrice(aggV.gettotalPrice() + v.getPrice())
                         .withavgPrice((aggV.gettotalPrice() + v.getPrice()) / (aggV.getstockCount() + 1D)),
                 //Serializer
-                Materialized.<String, TickerAggregator, KeyValueStore<Bytes, byte[]>>as("agg-store")
+                Materialized.<String, TickerAggregator, WindowStore<Bytes, byte[]>> as("agg-store")
                         .withKeySerde(AppSerdes.String())
                         .withValueSerde( AppSerdes.TickerAggregate())
         );
