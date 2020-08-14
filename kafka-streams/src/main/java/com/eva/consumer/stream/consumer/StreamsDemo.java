@@ -66,9 +66,9 @@ public class StreamsDemo {
 
 
 
-        //TimeWindowedKStream<String, Integer> KGS0 =
+        //TimeWindowedKStream<String, Ticker> KGS0 =
                 // KTable<String, Integer> stockTicker =
-        KGroupedStream <String, Integer> KGS0 =
+        KGroupedStream <String, Ticker> KGS0 =
                 KS0.flatMapValues(tickers -> {
                             ObjectMapper mapper = new ObjectMapper();
                             mapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
@@ -97,7 +97,6 @@ public class StreamsDemo {
                     mapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
                     mapper.configure(JsonParser.Feature.AUTO_CLOSE_SOURCE, true);
 
-
                     Ticker ticker = new Ticker();
                     try {
                         ticker = mapper.readValue(values.toString(), Ticker.class);
@@ -107,35 +106,31 @@ public class StreamsDemo {
                         e.printStackTrace();
                     }
                     System.out.println(ticker.getName()+", "+ticker.getPrice());
-                    return new KeyValue<>(ticker.getName(), ticker.getPrice());
+                    //return new KeyValue<>(ticker.getName(), ticker.getPrice());
+                    return new KeyValue<>(ticker.getName(), ticker);
                 }).groupByKey();
-                       // .windowedBy(TimeWindows.of(Duration.ofSeconds(30)))
+                //.windowedBy(TimeWindows.of(Duration.ofSeconds(30)));
 
 
 
+        //KTable<String, TickerAggregator> KT2 = KGS0
+        //final KTable<Long, TickerAggregator> ratingCountAndSum =
+        KGS0.aggregate(
+                () -> new TickerAggregator().withavgPrice(0D)
+                .withavgPrice(0D).withstockCount(0),
+
+                (k,v,agg)-> new TickerAggregator()
+                .withtotalPrice(v.getPrice() + agg.gettotalPrice())
+                .withstockCount(agg.getstockCount() + 1)
+                .withavgPrice((v.getPrice() + agg.gettotalPrice())/(agg.getstockCount() + 1D)),
+
+                Materialized.<String, TickerAggregator, KeyValueStore<Bytes, byte[]>> as ("")
+                .withKeySerde(Serdes.String())
+                .withValueSerde(new TickerAggSerde()))
+
+                .toStream().print(Printed.<String, TickerAggregator>toSysOut().withLabel(" Ticker Average "));
 
 
-        KTable<String, TickerAggregator> KT2 = KGS0
-                .aggregate(
-                //Initializer
-                () -> new TickerAggregator().withstockCount(0).withtotalPrice(0).withavgPrice(0D),
-                //Aggregator
-
-                (k, v, aggV) -> new TickerAggregator()
-                        .withstockCount(aggV.getstockCount() + 1)
-                        .withtotalPrice( (v + aggV.gettotalPrice()) )
-                        .withavgPrice((aggV.gettotalPrice() + v) / (aggV.getstockCount() + 1D)),
-                        //Serializer
-                        Materialized.<String, TickerAggregator, KeyValueStore<Bytes, byte[]>>as("agg-store")
-                                .withKeySerde(Serdes.String())
-                                .withValueSerde(new TickerAggSerde())
-
-        );
-
-
-
-        KT2.toStream().foreach(
-                (k, v) -> System.out.println("Ticker = " + k + " Avg Price = " + v));
 
         KafkaStreams streams = new KafkaStreams(streamBuilder.build(), properties);
         streams.start();

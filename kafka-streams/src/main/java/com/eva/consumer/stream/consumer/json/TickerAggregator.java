@@ -14,6 +14,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
     })
     public class TickerAggregator {
 
+        public TickerAggregator(Integer totalPrice, Integer stockCount, Double avgPrice) {
+            this.totalPrice = totalPrice;
+            this.stockCount = stockCount;
+            this.avgPrice = avgPrice;
+        }
+
+        public TickerAggregator() {
+
+        }
+
         @JsonProperty("total_price")
         private Integer totalPrice;
         @JsonProperty("stock_count")
