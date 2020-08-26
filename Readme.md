@@ -1,5 +1,9 @@
 # Sample kafka Microservices to produce random stock data and consumers to calculate stock average in a window
 
+
+
+   
+   
 ### Start Kafka using docker compose or Shell Script
 docker-compose up
 
