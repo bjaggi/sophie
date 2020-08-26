@@ -8,7 +8,7 @@ docker-compose up
 mvn clean install 
 ## to Build Producer Image 
 docker build -t kafka-producer:v1 -f Dockerfile .
-## to Build Producer Image 
+## to Run Docker Producer Image 
 docker run kafka-producer:v1
 
 
